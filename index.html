@@ -58,6 +58,7 @@
               <a href="#projects" class="btn">[ PROJECTS ]</a>
               <a href="#experience" class="btn">[ EXPERIENCE ]</a>
               <a href="#contact" class="btn">[ CONTACT ]</a>
+              <a href="Max Resume.pdf" download class="btn">[ RESUME ]</a> 
             </div>
             <div class="cursor-line">&gt; <span class="cursor">_</span></div>
           </div>
@@ -93,6 +94,7 @@
               <ul>
                 <li><span class="prompt">&gt;</span> React</li>
                 <li><span class="prompt">&gt;</span> Node.js</li>
+                <li><span class="prompt">&gt;</span> Godot Engine 4.x</li>
               </ul>
               <h3 style="margin-top:2rem">// TOOLS</h3>
               <ul>
@@ -102,6 +104,9 @@
                 <li><span class="prompt">&gt;</span> Photoshop</li>
                 <li><span class="prompt">&gt;</span> Linux (Ubuntu)</li>
                 <li><span class="prompt">&gt;</span> Jira</li>
+                <li><span class="prompt">&gt;</span> SCons</li>
+                <li><span class="prompt">&gt;</span> clang-format</li>
+                <li><span class="prompt">&gt;</span> pre-commit</li>
               </ul>
             </div>
           </div>
@@ -141,12 +146,9 @@
               <p>Contributed multiple bug fixes to the <strong>Godot Engine</strong>, improving editor stability
   and core engine behavior through C++ changes and upstream pull requests.</p>
               <div class="project-links">
-                <a href="#">[ CONTRIBUTIONS ]</a>
+                <a href="godotContributions.html">[ CONTRIBUTIONS ]</a>
               </div>
             </div>
-          </div>
-
-          <div id="extra-projects" class="projects-grid projects-grid--extra" hidden>
             <div class="project-card">
               <div class="card-header">// PROJECT_04.EXE</div>
               <h3>En Garde</h3>
@@ -187,6 +189,9 @@
               <li>Generated color-magnitude diagrams using photometric data to support stellar classification research.</li>
               <li>Automated data processing workflows to improve analysis efficiency and accuracy.</li>
             </ul>
+            <div class="exp-links">
+              <a href="#" class="btn">[ DEEP_DIVE ]</a>
+            </div>
           </div>
           <div class="experience-item">
             <div class="exp-header">
@@ -197,6 +202,9 @@
               <li>Developed modular minigames in Unity using C#.</li>
               <li>Collaborated with a small agile team to design, implement, and debug gameplay features.</li>
             </ul>
+            <div class="exp-links">
+              <a href="#" class="btn">[ DEEP_DIVE ]</a>
+            </div>
           </div>
           <div class="experience-item">
             <div class="exp-header">
@@ -309,6 +317,19 @@ function runBoot() {
   timeouts.push(t);
 }
 
+function typeAsciiArt(el, text) {
+  const lines = text.split('\n');
+  let i = 0;
+  el.textContent = '';
+  function nextLine() {
+    if (i >= lines.length) return;
+    el.textContent += (i === 0 ? '' : '\n') + lines[i];
+    i++;
+    setTimeout(nextLine, 18);
+  }
+  nextLine();
+}
+
 function transitionToSite() {
   booting = false;
   const bootScreen = document.getElementById('boot-screen');
@@ -320,8 +341,8 @@ function transitionToSite() {
     main.style.display = 'block';
     main.style.opacity = '0';
     main.style.transition = 'opacity 0.8s ease';
-    document.getElementById('ascii-art').textContent = ASCII_ART;
     setTimeout(() => { main.style.opacity = '1'; }, 50);
+    typeAsciiArt(document.getElementById('ascii-art'), ASCII_ART);
   }, 800);
 }
 

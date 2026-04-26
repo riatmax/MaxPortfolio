@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GODOT CONTRIBUTIONS // PROJECT_03.EXE</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      html { scroll-snap-type: none; }
+
+      #dd-main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: calc(var(--nav-h) + 3rem) 2rem 4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+      }
+
+      .dd-file-label {
+        font-size: 12px;
+        color: var(--green-dim);
+        letter-spacing: 0.15em;
+        margin-bottom: 0.5rem;
+      }
+
+      .dd-hero h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        letter-spacing: 0.1em;
+        animation: textglow 3s ease-in-out infinite;
+        margin-bottom: 1rem;
+      }
+
+      .dd-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-bottom: 1rem;
+      }
+
+      .dd-badge {
+        font-size: 12px;
+        color: var(--green-mid);
+        border: 1px solid var(--green-dim);
+        padding: 2px 10px;
+        letter-spacing: 0.08em;
+      }
+
+      .dd-section-label {
+        font-size: 12px;
+        color: var(--green-dim);
+        letter-spacing: 0.12em;
+        margin-bottom: 1.25rem;
+        border-bottom: 1px solid var(--green-dim);
+        padding-bottom: 4px;
+      }
+
+      .dd-body {
+        font-size: 14px;
+        color: var(--green);
+        line-height: 1.85;
+        max-width: 720px;
+        border-left: 2px solid var(--green-dim);
+        padding-left: 1rem;
+      }
+
+      .contribution-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+
+      .contribution-entry {
+        border: 1px solid var(--green-dim);
+        background: var(--bg-panel);
+        transition: box-shadow 0.2s;
+      }
+
+      .contribution-entry:hover {
+        box-shadow: 0 0 16px var(--green-dim);
+      }
+
+      .contribution-header {
+        background: var(--green-dim);
+        color: var(--bg);
+        font-size: 11px;
+        padding: 3px 10px;
+        letter-spacing: 0.1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .contribution-status {
+        font-size: 10px;
+        letter-spacing: 0.08em;
+      }
+
+      .contribution-body {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .contribution-title {
+        font-size: 14px;
+        color: var(--green);
+        letter-spacing: 0.06em;
+      }
+
+      .contribution-meta {
+        font-size: 12px;
+        color: var(--green-dim);
+        letter-spacing: 0.08em;
+      }
+
+      .contribution-desc {
+        font-size: 13px;
+        color: var(--green-mid);
+        line-height: 1.75;
+        margin-top: 0.25rem;
+      }
+
+      .contribution-link {
+        margin-top: 0.5rem;
+      }
+
+      .contribution-link a {
+        font-size: 12px;
+        color: var(--green);
+        text-decoration: none;
+        letter-spacing: 0.08em;
+        transition: text-shadow 0.2s;
+      }
+
+      .contribution-link a:hover {
+        text-shadow: 0 0 8px var(--green);
+      }
+
+      .dd-tech-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .dd-tech-list li {
+        font-size: 14px;
+        color: var(--green);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .dd-back {
+        border-top: 1px solid var(--green-dim);
+        padding-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="crt-overlay"></div>
+    <div class="scanlines"></div>
+
+    <nav id="navbar">
+      <span class="nav-logo">&gt; MAX.I.MUS TERMINAL v1.0</span>
+      <ul class="nav-links">
+        <li><a href="index.html">[ &lt; BACK ]</a></li>
+        <li><a href="index.html#projects">[ PROJECTS ]</a></li>
+      </ul>
+    </nav>
+
+    <main id="dd-main">
+
+      <!-- HERO -->
+      <section class="dd-hero">
+        <div class="dd-file-label">// PROJECT_03.EXE</div>
+        <h1 class="glitch" data-text="GODOT ENGINE">GODOT ENGINE</h1>
+        <div class="dd-meta">
+          <span class="dd-badge">&gt; REPO: godotengine/godot</span>
+          <span class="dd-badge">&gt; LANG: C++</span>
+          <span class="dd-badge">&gt; ROLE: Contributor</span>
+          <span class="dd-badge">&gt; STATUS: ONGOING</span>
+        </div>
+        <p class="tagline">&gt; Open-source contributions to the Godot game engine</p>
+      </section>
+
+      <!-- OVERVIEW -->
+      <section>
+        <div class="dd-section-label">// OVERVIEW.TXT</div>
+        <p class="dd-body">
+          Godot Engine is a free, open-source game engine maintained by thousands of contributors worldwide.
+          My contributions focus on identifying and resolving bugs in editor stability and core engine behavior,
+          working directly in C++ and submitting upstream pull requests to the main repository.
+        </p>
+      </section>
+
+      <!-- CONTRIBUTIONS -->
+      <section>
+        <div class="dd-section-label">// PATCH_LOG.DAT</div>
+        <div class="contribution-list">
+
+          <div class="contribution-entry">
+            <div class="contribution-header">
+              <span>// FIX_001</span>
+              <span class="contribution-status">[ PENDING REVIEW ]</span>
+            </div>
+            <div class="contribution-body">
+              <div class="contribution-title">Show Root Node Name in Unsaved Scene Close Dialog</div>
+              <div class="contribution-meta">&gt; AREA: Editor &nbsp;|&nbsp; ENGINE VERSION: 4.x &nbsp;|&nbsp; FILE: editor/editor_node.cpp</div>
+              <p class="contribution-desc">
+                When closing multiple unsaved scenes that had never been saved, the dialog displayed a generic
+                "This scene was never saved." message with no way to distinguish between scenes. Traced the root cause
+                to tabs_to_close storing scenes by file path — since never-saved scenes have no path, all resolved
+                to the same tab index. Fixed by changing tabs_to_close from List&lt;String&gt; to List&lt;int&gt; to
+                track scenes by index directly, and updated the dialog to display the root node name as an identifier.
+              </p>
+              <div class="contribution-link">
+                <a href="https://github.com/godotengine/godot/pull/118235" target="_blank">[ VIEW PULL REQUEST ]</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contribution-entry">
+            <div class="contribution-header">
+              <span>// FIX_002</span>
+              <span class="contribution-status">[ CLOSED ]</span>
+            </div>
+            <div class="contribution-body">
+              <div class="contribution-title">Hide Bottom Panel in Distraction Free Mode</div>
+              <div class="contribution-meta">&gt; AREA: Editor &nbsp;|&nbsp; ENGINE VERSION: 4.x &nbsp;|&nbsp; FILE: editor/editor_node.cpp</div>
+              <p class="contribution-desc">
+                Distraction Free Mode (Ctrl+Shift+F11) only hid the left and right dock panels but left the bottom
+                panel visible, failing to fully maximize the viewport. Added hide and restore logic for the bottom
+                panel inside set_distraction_free_mode(), using the existing hide_bottom_panel() method and
+                get_previous_tab() to restore the previously active tab when exiting the mode. Original issue was closed due to intended behavior.
+              </p>
+              <div class="contribution-link">
+                <a href="https://github.com/godotengine/godot/pull/118502" target="_blank">[ VIEW PULL REQUEST ]</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contribution-entry">
+            <div class="contribution-header">
+              <span>// FIX_003</span>
+              <span class="contribution-status">[ PENDING REVIEW ]</span>
+            </div>
+            <div class="contribution-body">
+              <div class="contribution-title">Suppress Error Spam for Empty AudioStreamOggVorbis</div>
+              <div class="contribution-meta">&gt; AREA: Scripting &nbsp;|&nbsp; ENGINE VERSION: 4.x &nbsp;|&nbsp; FILE: modules/vorbis/audio_stream_ogg_vorbis.cpp</div>
+              <p class="contribution-desc">
+                Adding an empty AudioStreamOggVorbis resource to an AudioStreamPlayer caused the editor to spam
+                "Condition: packet_sequence.is_null()" errors every frame while the Inspector was open. The
+                get_length() function was being polled continuously by the Inspector and used ERR_FAIL_COND_V
+                which logs on every call. Replaced with a silent null check since an empty resource is a valid
+                state, not an unexpected error.
+              </p>
+              <div class="contribution-link">
+                <a href="https://github.com/godotengine/godot/pull/118592" target="_blank">[ VIEW PULL REQUEST ]</a>
+              </div>
+            </div>
+          </div>
+
+          <!--
+          <div class="contribution-entry">
+            <div class="contribution-header">
+              <span>// FIX_004</span>
+              <span class="contribution-status">[ PENDING REVIEW ]</span>
+            </div>
+            <div class="contribution-body">
+              <div class="contribution-title">Allow Blank Inherits Field in Create Script Dialog</div>
+              <div class="contribution-meta">&gt; AREA: Editor &nbsp;|&nbsp; ENGINE VERSION: 4.x &nbsp;|&nbsp; FILE: editor/script/script_create_dialog.cpp</div>
+              <p class="contribution-desc">
+                The Create Script dialog blocked script creation if the Inherits field was left empty, showing
+                "Invalid inherited parent name or path." — even though GDScript supports scripts with no inheritance.
+                Fixed _validate_parent() to treat an empty string as valid, and guarded the custom type lookup in
+                _create_new() to skip when parent class is empty, allowing scripts to be created without an extends line.
+              </p>
+              <div class="contribution-link">
+                <a href="#" target="_blank">[ VIEW PULL REQUEST ]</a>
+              </div>
+            </div>
+          </div>
+            -->
+        </div>
+      </section>
+
+      <!-- TECH STACK -->
+      <section>
+        <div class="dd-section-label">// TECH_STACK.CFG</div>
+        <ul class="dd-tech-list">
+          <li><span class="prompt">&gt;</span> C++ (Engine Source)</li>
+          <li><span class="prompt">&gt;</span> Godot Engine 4.x</li>
+          <li><span class="prompt">&gt;</span> Git &amp; GitHub (Pull Requests)</li>
+          <li><span class="prompt">&gt;</span> SCons (Build System)</li>
+          <li><span class="prompt">&gt;</span> pre-commit / clang-format (Code Style)</li>
+        </ul>
+      </section>
+
+      <!-- BACK -->
+      <div class="dd-back">
+        <a href="index.html#projects" class="btn">[ &lt; RETURN TO PORTFOLIO ]</a>
+        <div class="cursor-line" style="margin-top:1rem">&gt; <span class="cursor">_</span></div>
+      </div>
+
+    </main>
+
+    <footer>
+      <span>TERMINAL v1.0 // SYSTEM ONLINE</span>
+      <span>PROJECT_03 // GODOT CONTRIBUTIONS</span>
+      <span>BUILD: 2026.04.25</span>
+    </footer>
+
+  </body>
+</html>
