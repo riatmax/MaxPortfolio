@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FEUD // PROJECT_01.EXE</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      html { scroll-snap-type: none; }
+
+      #dd-main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: calc(var(--nav-h) + 3rem) 2rem 4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+      }
+
+      /* ---- Hero ---- */
+      .dd-file-label {
+        font-size: 12px;
+        color: var(--green-dim);
+        letter-spacing: 0.15em;
+        margin-bottom: 0.5rem;
+      }
+
+      .dd-hero h1 {
+        font-size: clamp(2.4rem, 5vw, 3.6rem);
+        letter-spacing: 0.12em;
+        animation: textglow 3s ease-in-out infinite;
+        margin-bottom: 1rem;
+      }
+
+      .dd-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-bottom: 1rem;
+      }
+
+      .dd-badge {
+        font-size: 12px;
+        color: var(--green-mid);
+        border: 1px solid var(--green-dim);
+        padding: 2px 10px;
+        letter-spacing: 0.08em;
+      }
+
+      /* ---- Sections ---- */
+      .dd-section-label {
+        font-size: 12px;
+        color: var(--green-dim);
+        letter-spacing: 0.12em;
+        margin-bottom: 1.25rem;
+        border-bottom: 1px solid var(--green-dim);
+        padding-bottom: 4px;
+      }
+
+      .dd-body {
+        font-size: 14px;
+        color: var(--green);
+        line-height: 1.85;
+        max-width: 720px;
+        border-left: 2px solid var(--green-dim);
+        padding-left: 1rem;
+      }
+
+      /* ---- Media ---- */
+      .dd-media-primary {
+        width: 100%;
+        border: 1px solid var(--green-dim);
+        background: var(--bg-panel);
+        padding: 0;
+        margin-bottom: 1.25rem;
+      }
+
+      .dd-media-primary img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .dd-media-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1rem;
+      }
+
+      .dd-media-item {
+        border: 1px solid var(--green-dim);
+        background: var(--bg-panel);
+        padding: 0;
+      }
+
+      .dd-media-item img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .dd-media-caption {
+        font-size: 11px;
+        color: var(--green-dim);
+        letter-spacing: 0.1em;
+        padding: 4px 8px;
+        border-top: 1px solid var(--green-dim);
+      }
+
+      /* ---- System cards ---- */
+      .dd-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.25rem;
+      }
+
+      .dd-card {
+        border: 1px solid var(--green-dim);
+        background: var(--bg-panel);
+        padding: 0;
+        transition: box-shadow 0.2s;
+      }
+
+      .dd-card:hover {
+        box-shadow: 0 0 16px var(--green-dim);
+      }
+
+      .dd-card-header {
+        background: var(--green-dim);
+        color: var(--bg);
+        font-size: 11px;
+        padding: 3px 10px;
+        letter-spacing: 0.1em;
+      }
+
+      .dd-card p {
+        font-size: 13px;
+        color: var(--green-mid);
+        line-height: 1.75;
+        padding: 1rem;
+      }
+
+      /* ---- Tech list ---- */
+      .dd-tech-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .dd-tech-list li {
+        font-size: 14px;
+        color: var(--green);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      /* ---- Back ---- */
+      .dd-back {
+        border-top: 1px solid var(--green-dim);
+        padding-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="crt-overlay"></div>
+    <div class="scanlines"></div>
+
+    <nav id="navbar">
+      <span class="nav-logo">&gt; MAX.I.MUS TERMINAL v1.0</span>
+      <ul class="nav-links">
+        <li><a href="index.html">[ &lt; BACK ]</a></li>
+        <li><a href="index.html#projects">[ PROJECTS ]</a></li>
+      </ul>
+    </nav>
+
+    <main id="dd-main">
+
+      <!-- HERO -->
+      <section class="dd-hero">
+        <div class="dd-file-label">// PROJECT_01.EXE</div>
+        <h1 class="glitch" data-text="FEUD">FEUD</h1>
+        <div class="dd-meta">
+          <span class="dd-badge">&gt; ENGINE: Unity</span>
+          <span class="dd-badge">&gt; LANG: C#</span>
+          <span class="dd-badge">&gt; ROLE: Lead Programmer</span>
+          <span class="dd-badge">&gt; STATUS: IN PROGRESS</span>
+        </div>
+        <p class="tagline">&gt; Where Friendships End</p>
+      </section>
+
+      <!-- OVERVIEW -->
+      <section>
+        <div class="dd-section-label">// OVERVIEW.TXT</div>
+        <p class="dd-body">
+          Feud is a 3D local multiplayer party game built in Unity where players compete to collect the most cherries by gathering from a shared tree or stealing from other players. I contributed core gameplay systems, including a modular event system, round management logic, and a flexible power-up system that supports dynamic gameplay interactions.
+        </p>
+      </section>
+
+      <!-- MEDIA -->
+      <section>
+        <div class="dd-section-label">// GAMEPLAY_FOOTAGE.DAT</div>
+        <div class="dd-media-primary">
+          <img src="zombie.gif" alt="Feud — arena gameplay" />
+          <div class="dd-media-caption">&gt; Zombie Event - AI character &amp; Event System</div>
+        </div>
+        <!-- Additional clips — update labels or remove as needed -->
+        <div class="dd-media-grid">
+          <div class="dd-media-item">
+            <img src="feud.gif" alt="Meteor" />
+            <div class="dd-media-caption">&gt; Meteor Event</div>
+          </div>
+          <div class="dd-media-item">
+            <img src="Alien.gif" alt="Alien" />
+            <div class="dd-media-caption">&gt; UFO Event</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SYSTEMS -->
+      <section>
+        <div class="dd-section-label">// SYSTEMS.LOG</div>
+        <div class="dd-cards">
+          <div class="dd-card">
+            <div class="dd-card-header">// ENEMY_AI.SYS</div>
+            <p>State-machine-driven AI that transitions between wandering, chasing, attacking,
+            and recovery states to create reactive enemy behavior around the player.</p>
+          </div>
+          <div class="dd-card">
+            <div class="dd-card-header">// GAME_INFRA.SYS</div>
+            <p>Round management system responsible for controlling match flow, resetting state
+            between rounds, and maintaining consistent multiplayer pacing.</p>
+          </div>
+          <div class="dd-card">
+            <div class="dd-card-header">// MECHANICS.SYS</div>
+            <p>Modular event and power-up architecture enabling scalable gameplay effects and
+        easy addition of new mechanics without modifying core systems.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TECH STACK -->
+      <section>
+        <div class="dd-section-label">// TECH_STACK.CFG</div>
+        <ul class="dd-tech-list">
+          <li><span class="prompt">&gt;</span> Unity (Game Engine)</li>
+          <li><span class="prompt">&gt;</span> C# (Primary Language)</li>
+          <li><span class="prompt">&gt;</span> Git &amp; GitHub (Version Control)</li>
+        </ul>
+      </section>
+
+      <!-- BACK -->
+      <div class="dd-back">
+        <a href="index.html#projects" class="btn">[ &lt; RETURN TO PORTFOLIO ]</a>
+        <div class="cursor-line" style="margin-top:1rem">&gt; <span class="cursor">_</span></div>
+      </div>
+
+    </main>
+
+    <footer>
+      <span>TERMINAL v1.0 // SYSTEM ONLINE</span>
+      <span>PROJECT_01 // FEUD</span>
+      <span>BUILD: 2026.04.25</span>
+    </footer>
+
+  </body>
+</html>
