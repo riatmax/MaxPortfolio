@@ -22,7 +22,8 @@
 
       <nav id="navbar">
         <span class="nav-logo">&gt; MAX.I.MUS TERMINAL v1.0</span>
-        <ul class="nav-links">
+        <button class="nav-burger" id="nav-burger" onclick="toggleNav()">&#9776;</button>
+        <ul class="nav-links" id="nav-links">
           <li><a href="#home">[ HOME ]</a></li>
           <li><a href="#skills">[ SKILLS ]</a></li>
           <li><a href="#projects">[ PROJECTS ]</a></li>
@@ -241,6 +242,15 @@
     </div><!-- end #main-site -->
 
     <script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+document.querySelectorAll('#nav-links a').forEach(function(a) {
+  a.addEventListener('click', function() {
+    document.getElementById('nav-links').classList.remove('open');
+  });
+});
+
 function toggleProjects() {
   const extra = document.getElementById('extra-projects');
   const btn   = document.getElementById('more-btn');

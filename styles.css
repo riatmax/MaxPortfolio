@@ -546,3 +546,92 @@ footer {
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--green-dim); }
+
+/* ============================================================
+   MOBILE / RESPONSIVE
+   ============================================================ */
+
+.nav-burger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--green);
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+  text-shadow: 0 0 8px var(--green);
+  transition: color 0.2s, text-shadow 0.2s;
+  line-height: 1;
+}
+
+.nav-burger:hover {
+  color: #fff;
+  text-shadow: 0 0 10px var(--green), 0 0 20px var(--green);
+}
+
+@media (max-width: 768px) {
+
+  /* -- Disable mandatory snap on mobile -- */
+  html { scroll-snap-type: none; }
+
+  /* -- Navbar -- */
+  #navbar { padding: 0 1rem; }
+
+  .nav-burger { display: block; }
+
+  /* Only hide nav-links when a burger button is present (main page) */
+  #navbar:has(.nav-burger) .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--bg);
+    border-bottom: 1px solid var(--green-dim);
+    padding: 0.5rem 0;
+    gap: 0;
+    z-index: 999;
+  }
+
+  #navbar:has(.nav-burger) .nav-links.open { display: flex; }
+
+  #navbar:has(.nav-burger) .nav-links li { padding: 6px 1.5rem; }
+
+  /* -- Boot screen -- */
+  #boot-output { font-size: 10px; }
+
+  /* -- Home -- */
+  .home-layout {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .ascii-panel { display: none; }
+
+  .home-content { padding-top: 0.5rem; }
+
+  /* -- Sections -- */
+  .page-inner { padding: 2rem 1rem; }
+
+  .section-header span {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  /* -- Skills -- */
+  .skills-grid { grid-template-columns: 1fr; }
+
+  /* -- Contact bar -- */
+  .contact-bar { flex-wrap: wrap; gap: 0.75rem; }
+
+  /* -- Footer -- */
+  footer {
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+  }
+}
