@@ -8,260 +8,14 @@
   </head>
   <body>
 
-    <!-- CRT overlay -->
     <div class="crt-overlay"></div>
     <div class="scanlines"></div>
 
-    <!-- ===================== BOOT SCREEN ===================== -->
     <div id="boot-screen">
       <pre id="boot-output"></pre>
     </div>
 
-    <!-- ===================== MAIN SITE (hidden until boot done) ===================== -->
-    <div id="main-site" style="display:none;">
-
-      <nav id="navbar">
-        <span class="nav-logo">&gt; MAX.I.MUS TERMINAL v1.0</span>
-        <button class="nav-burger" id="nav-burger" onclick="toggleNav()">&#9776;</button>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="#home">[ HOME ]</a></li>
-          <li><a href="#skills">[ SKILLS ]</a></li>
-          <li><a href="#projects">[ PROJECTS ]</a></li>
-          <li><a href="#experience">[ EXPERIENCE ]</a></li>
-          <li><a href="#contact">[ CONTACT ]</a></li>
-          <li><a href="Max Resume.pdf" download class="nav-resume">[ RESUME ]</a></li>
-        </ul>
-      </nav>
-
-      <!-- HOME -->
-      <section id="home" class="page">
-        <div class="home-layout">
-
-          <div class="ascii-panel">
-            <div class="panel-header">// USER_PROFILE.IMG</div>
-            <pre id="ascii-art" class="ascii-art"></pre>
-            <div class="panel-footer">RENDER COMPLETE</div>
-          </div>
-
-          <div class="home-content">
-            <h1 class="glitch" data-text="Maximus Riat">Maximus Riat</h1>
-            <p class="tagline">&gt; Software Engineer</p>
-            <p class="bio">
-              Hello! My name is Maximus Riat, and I’m a software engineer with a strong interest in building engaging, systems-driven experiences. My work combines technical problem-solving with creative design, whether that’s developing interactive applications or building systems that are intuitive and engaging to use. I enjoy tackling complex challenges, refining performance, and turning ideas into polished, functional products.
-            </p>
-            <div class="contact-bar">
-              <a href="mailto:riatmax@gmail.com">&gt; EMAIL</a>
-              <a href="https://github.com/riatmax" target="_blank">&gt; GITHUB</a>
-              <a href="https://linkedin.com/in/riatmax" target="_blank">&gt; LINKEDIN</a>
-            </div>
-            <div class="page-buttons">
-              <a href="#skills" class="btn">[ SKILLS ]</a>
-              <a href="#projects" class="btn">[ PROJECTS ]</a>
-              <a href="#experience" class="btn">[ EXPERIENCE ]</a>
-              <a href="#contact" class="btn">[ CONTACT ]</a>
-              <a href="Max Resume.pdf" download class="btn">[ RESUME ]</a> 
-            </div>
-            <div class="cursor-line">&gt; <span class="cursor">_</span></div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- SKILLS -->
-      <section id="skills" class="page">
-        <div class="page-inner">
-          <div class="section-header">
-            <span>========================================</span>
-            <h2>&gt; SKILLS DATABASE</h2>
-            <span>========================================</span>
-          </div>
-          <div class="skills-grid">
-            <div class="skills-group">
-              <h3>// LANGUAGES</h3>
-              <ul>
-                <li><span class="prompt">&gt;</span> C++</li>
-                <li><span class="prompt">&gt;</span> Python</li>
-                <li><span class="prompt">&gt;</span> Java</li>
-                <li><span class="prompt">&gt;</span> C#</li>
-                <li><span class="prompt">&gt;</span> JavaScript</li>
-                <li><span class="prompt">&gt;</span> TypeScript</li>
-                <li><span class="prompt">&gt;</span> SQL</li>
-                <li><span class="prompt">&gt;</span> HTML / CSS</li>
-                <li><span class="prompt">&gt;</span> C</li>
-              </ul>
-            </div>
-            <div class="skills-group">
-              <h3>// FRAMEWORKS</h3>
-              <ul>
-                <li><span class="prompt">&gt;</span> React</li>
-                <li><span class="prompt">&gt;</span> Node.js</li>
-                <li><span class="prompt">&gt;</span> Godot Engine 4.x</li>
-              </ul>
-              <h3 style="margin-top:2rem">// TOOLS</h3>
-              <ul>
-                <li><span class="prompt">&gt;</span> Git &amp; GitHub</li>
-                <li><span class="prompt">&gt;</span> Unreal Engine 5</li>
-                <li><span class="prompt">&gt;</span> Unity</li>
-                <li><span class="prompt">&gt;</span> Photoshop</li>
-                <li><span class="prompt">&gt;</span> Linux (Ubuntu)</li>
-                <li><span class="prompt">&gt;</span> Jira</li>
-                <li><span class="prompt">&gt;</span> SCons</li>
-                <li><span class="prompt">&gt;</span> clang-format</li>
-                <li><span class="prompt">&gt;</span> pre-commit</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PROJECTS -->
-      <section id="projects" class="page">
-        <div class="page-inner">
-          <div class="section-header">
-            <span>========================================</span>
-            <h2>&gt; PROJECT FILES</h2>
-            <span>========================================</span>
-          </div>
-          <div class="projects-grid">
-            <div class="project-card">
-              <div class="card-header">// PROJECT_01.EXE</div>
-              <h3>Feud</h3>
-              <p>Developed core game infrastructure, enemy ai, and gameplay mechanics.</p>
-              <div class="project-links">
-                <a href="feud.html">[ DEEP_DIVE ]</a>
-                <a href="https://vicman8.itch.io/feud">[ PLAY ]</a>
-              </div>
-            </div>
-            <div class="project-card">
-              <div class="card-header">// PROJECT_02.EXE</div>
-              <h3>GenMark</h3>
-              <p>Designed benchmarking tool for Procedural Content Generation algorithms.</p>
-              <div class="project-links">
-                <a href="GenMark.html">[ DEEP_DIVE ]</a>
-                <a href="https://github.com/riatmax/GenMark">[ GITHUB ]</a>
-              </div>
-            </div>
-            <div class="project-card">
-              <div class="card-header">// PROJECT_03.EXE</div>
-              <h3>Godot Engine Contributions</h3>
-              <p>Contributed multiple bug fixes to the <strong>Godot Engine</strong>, improving editor stability
-  and core engine behavior through C++ changes and upstream pull requests.</p>
-              <div class="project-links">
-                <a href="godotContributions.html">[ CONTRIBUTIONS ]</a>
-              </div>
-            </div>
-            <div class="project-card">
-              <div class="card-header">// PROJECT_04.EXE</div>
-              <h3>En Garde</h3>
-              <p>Developed a timing-based 2D fencing combat system with reactive enemy AI, focusing on precise input handling, parry/dodge mechanics, and readable attack design.</p>
-              <div class="project-links">
-                <a href="EnGarde.html">[ DEEP_DIVE ]</a>
-                <a href="https://rfler.itch.io/en-garde">[ PLAY ]</a>
-              </div>
-            </div>
-            <div class="project-card">
-              <div class="card-header">// PROJECT_05.EXE</div>
-              <h3>Sector Survivor</h3>
-              <p>Extended a custom Java game engine by implementing a wave-based enemy system, mouse input handling, and a functional inventory system to create a complete gameplay loop within a constrained framework.</p>
-              <div class="project-links">
-                <a href="sectorSurv.html">[ DEEP_DIVE ]</a>
-                <a href="https://github.com/ConnorNylund/RPG-game-SER225">[ GITHUB ]</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- EXPERIENCE -->
-      <section id="experience" class="page">
-        <div class="page-inner">
-          <div class="section-header">
-            <span>========================================</span>
-            <h2>&gt; WORK LOG</h2>
-            <span>========================================</span>
-          </div>
-          <div class="experience-item">
-            <div class="exp-header">
-              <h3>ASTRONOMY RESEARCH PROJECT</h3>
-              <span class="exp-meta">Research Assistant // MAR 2024 - MAY 2025</span>
-            </div>
-            <ul>
-              <li>Developed Python scripts to align and preprocess astronomical image datasets for star cluster analysis.</li>
-              <li>Generated color-magnitude diagrams using photometric data to support stellar classification research.</li>
-              <li>Automated data processing workflows to improve analysis efficiency and accuracy.</li>
-            </ul>
-          </div>
-          <div class="experience-item">
-            <div class="exp-header">
-              <h3>INDISTINGUISHABLE FROM MAGIC / HEXICOSA INC.</h3>
-              <span class="exp-meta">Gameplay Programmer // JUN 2024 - AUG 2024</span>
-            </div>
-            <ul>
-              <li>Developed modular minigames in Unity using C#.</li>
-              <li>Collaborated with a small agile team to design, implement, and debug gameplay features.</li>
-            </ul>
-          </div>
-          <div class="experience-item">
-            <div class="exp-header">
-              <h3>QUINNIPIAC HACKATHON</h3>
-              <span class="exp-meta">Competitor // APR 2024 | NOV 2024 | APR 2025</span>
-            </div>
-            <ul>
-              <li>Built full project prototypes under strict time constraints using collaborative team workflows.</li>
-              <li>Multiple awards including 3rd Place and "Most Unique."</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact" class="page">
-        <div class="page-inner">
-          <div class="section-header">
-            <span>========================================</span>
-            <h2>&gt; ESTABLISH CONNECTION</h2>
-            <span>========================================</span>
-          </div>
-          <p class="contact-intro">AWAITING TRANSMISSION... feel free to reach out.</p>
-          <ul class="contact-links">
-            <li><span class="prompt">&gt;</span> EMAIL &nbsp;&nbsp;: <a href="mailto:riatmax@gmail.com">riatmax(at)gmail(dot)com</a></li>
-            <li><span class="prompt">&gt;</span> GITHUB &nbsp;: <a href="https://github.com/riatmax" target="_blank">github(dot)com/riatmax</a></li>
-            <li><span class="prompt">&gt;</span> LINKEDIN: <a href="https://www.linkedin.com/in/riatmax/" target="_blank">https://www(dot)linkedin(dot)com/in/riatmax/</a></li>
-          </ul>
-          <div class="cursor-line" style="margin-top:2rem">&gt; <span class="cursor">_</span></div>
-        </div>
-      </section>
-
-      <!-- FOOTER -->
-      <footer>
-        <span>TERMINAL v1.0 // SYSTEM ONLINE</span>
-        <span>UPTIME: <span id="uptime">0h 0m 0s</span></span>
-        <span>BUILD: 2026.04.25</span>
-      </footer>
-
-    </div><!-- end #main-site -->
-
     <script>
-function toggleNav() {
-  document.getElementById('nav-links').classList.toggle('open');
-}
-document.querySelectorAll('#nav-links a').forEach(function(a) {
-  a.addEventListener('click', function() {
-    document.getElementById('nav-links').classList.remove('open');
-  });
-});
-
-function toggleProjects() {
-  const extra = document.getElementById('extra-projects');
-  const btn   = document.getElementById('more-btn');
-  const open  = extra.hidden;
-  extra.hidden = !open;
-  btn.textContent = open ? '[ - LESS PROJECTS ]' : '[ + MORE PROJECTS ]';
-}
-
-const ASCII_ART = "+X+$:..;. X+;..:;$$$$$$     x.   .+;..:....   . ..       .             ..  :X$X$$$$$$$XX$X+. \n;;.X  .x+ ;.:    $$$$$$+    x..x+..:;;;;;;++++;:..        ..  .     ..  .;X$x$$$$$$x+...  .::\n   +;X;   + ;  .x$$$$$$+    ;x+::++++;.    :;:::+xXXXx+.   ....:  .;;+$$$$X$+$$$. .;+ ..  .::\n  ;;:     : +x: :$$$$$$+ X$X: +x.   ..:.      :::;++xXX$$$X;  .:.:::;;xx$:   ::. :...;..  ;$$\n.:  ;  .  xXX:; :$$$$$$$$   ...::;+;:.....          ...;+xx$$X::.::::..      ;+:.:.::+X$$$$$$\n .  ;  +XX;;+:;.;$$$$$$+..:;;;;++;;;;:::. .               .;xxxx;+:::.      . :;+$$$$$$$$$$$$\n    +.  +;;;+:. x$$$$+;:+++;++xxXxxx++.  :. .      ....::.. .;+;++++::.....  :+$X$$$$$$$$$$$$\n  ;:;   +:;.++x..X$xx;:;;+xXXXx+:::.::...:.:: ..::.... ....;+;;++xxx+:..  .;.:;;X$$$$$$$$$$$$\n...:;   .:x$;. .:x+XX++xxxx+++++x+;;;+++++++xxx++;:::::.:;;;;.;:.  :;....   ..:Xxx$$$$$$$$$$$\n..:;+.;$X$+++:.::+x$+:;:xXXXxxx+xxxxxXXx++++++xx+;++:.:...::..       :...   . :;x$$$$$$$$$$$$\n...;X+.x+;;x+:.:;+$$XXXXXxxxxxX++xxxXXXxx+;;;...:..: ..:.:.:.       :;:......: +xX$$$$$$$$$Xx\n:;+Xx::++:;;xxxx++Xx+xx+x++xXX$$$XXXXXX$$$$$Xx;;;;;:.           ....:;++;;;;;;.:xX$$$++:.    \n  ;XX;;x;+X$+;  :;xx+xxXxxxXXXX$$$$$$$$$$$$$$$XXXx+;;;;;::;;::::....::+XxxxxXx+;.            \n: ;xX;xXx++X++..:+xXxxxxxXxxxX$$$$$$$$$$XX$$XXXXxx+++;;;;;;;;:::.....::xXXxXXx:              \n;;xXX;:++++X++:.:;X$XXXxxxXXXXXXX$$XXXXXXXxxxx++++;;;;;;;;::;:::....:::+XXXXXx               \n.:+;X+;++xx$xXXXXx$$XXXXxXXXXXXxXXxxXXx+x++x+;;;;;;;;;;::::;:::::....::+XXXXx+               \n .x+x+++++X$$+..:xxxXxXX+:::;+xXXXxxx+++;+++;++;;;;;;::::::::::::....::+X$XXx+               \n ;xx$X+xXXX$x+.:;xxXXxXx;:.....:::;;+++;++;;;;;;;;;;;;:::::::::::......;X$$Xx+               \nxx; xx;xxxxXx+.++xXXXXXx;........::::::::;;;;;;;;;;;;:::::::::::......:;X$$Xx;         .:;X..\n;.x +x;;xX$$$$$XxXXxXXXx:....:::....:::::::;;;;;;;;;;;:::::::::.......:+XX$XX:.;:::  . :   ; \n+:+:x$$$$$$$$$$XXXXXXXX+:.:::::;;;::::..::::;;;;;;;;;;;;::::::::......:+xXXXX .x            .\n$$$$$$$$$$$$$$$XXXXX$$X;::::;+xxxxxxxx+;::;;;:;;;;;;;;;;;;;;;;::....:.:;XXXX+  :             \n$$$$$$$$$$$$X+   :xX$$X;::;++xxxxxXXXXXxxx++;;:::;;;;;;++xxxxx++;:.. ..;X$XX:  .            .\n$$$$$X;.         ;:+x$X+;;;;;;;:::;;;;;;;++++;;;;;;;;++xxxxxxxx++++;...:$$X+:  :          : .\n+;.               ;:xXx;++;:.:::;+++xxxXx+;;;;:;;;;;++++++++;;;;++x+;:::$$x;.  :    .        \n ..               ..+Xxx;;;;;+XX$XXx$$$xX$X++++;;+++xxxXXXXXxxxxx+++;...X$x    ..  .:X$$$$$$;\n            ..    .:+x$xX$x;:;+++xxxXXXXXX$XXx+++;+xXX$$$$Xxxxxx+xxXX;:;x;.x   x+:   :.:+Xx  \n     .      ;     .:+;.+$+..:;;;;;;;;;++++;;;X$$$$$$$+++xxxxxx+++x+;.;x$$$               .   \n     ;      X     .:;+..X;...:;;;+++;++;;;;;;X$$XX$$x++++++;;;;++;:  . $X:    .; :.   .     .\n  . :;      X.    .::+..:+.....::;;++;;;;;;;+$X;::+$X+++++++;;;::..   .X;     ...::.   . :  .\n  . ;x: ::;xx:..;: ..;...+......::::;;;;;;;;$X;:  :x$;:::::::::.....  x;;     ;; ::    . ;  :\nxxx;:       x.    ...:;....X+  ..:.::;;+++X$x:..  .:x$;;;::::::..... x::.    .++ +;   .: +  :\n+    .      x:.   ::..;..... ..::;+xxxxXXX;:.........;X$XXXx+++xxx;.:.::     .:x+;: .::;;++; \n+. . .      X..  .:X$$x.........::::;;::;:..:::::::;;:;;;;;;;;;;;;;::::::$X$$$xx+;;     :$$X \nX$$$$x: :xXXX$:;x  :$$X..   ....:::::::::::;::::::;;:;:;;+;;;;;;;;;;::     ;;x x$$$x         \n        .   ::     :X$$..    ..:::::::::::;;;::::;;++++++++;;;;:;;;::: .  :  ;++$$+      . ; \n   . .  .. .x::::. ;$$$:.......:;;;;::::::;;;;;;;;;;+++++++;++;;:;;:;. :  ;. ;:+$+;.  :..:.  \n     .  .:  +::;:. x$$$$........:;;;+x:.:::;:;;;;;;;;++;;+xx++;::;;;;  :  : : .+$+;:. ::;:: ;\nx:..:;:Xxx++x$xx+;+X$$$$+.  ....:;::;;;++++xXx++++xxxxxx++++;;;:;;;;:  :  .....+Xx;:: ::;:. +\n+.  .;:     .x:    ;$$$$$;    ...:...::.::;;+++++++++++;;+;;;;:::;;:.  .  :.   :;;:.   .::. +\n+.  :;:.:.:.+X;:.  :$$$$$:.    ....:..........:::::;;;;;;;;;;:::::;X$$$$$$$$XXx;xXXX$$$$$$XXx\nxxxx+++..   +X;.   ;X$$$X  .................::::::::::;;;;;;;::::.       ;XX;;+.+xx  :x$$$$X$\n;..  .:xX$$XX$x+;..;X$$$    .:.............:::;;;;;;;;;;;;;;;;;;. :...          ;;: .     .  \n     .       X;  :+           :+:::::....::::::::;;;;;;;;;;;:;; : ::..      .   +;;;;  .  : .\n             :                 .;xx+;:::::::::::::;;;;;;;++;::; . ;:.           x;;+; ;:...  \n:                               ..+x+;;;:::::::::::;;;x+xx;::     ::.       .   x:;+; ;;. : .\n    .         ...:       ... . .....;x+x;::::::::::;;+xx;:::. :   +xXXx;::.     xx;.: ::.   .\n  .;        . .:;       .....   ......:Xx;:;::::::;;++::::::. :;:.     x$$$$$$$$X$$$$XXx+;:..\n            ..;::;.     .................:;+;++++++;::::::::..;;;:      .: .++; X$$$$$$$$$$$$\n            ..;;;+:    ....................::::::::::::::::::;++;+.             +$$$:+.;+  :x\n           .::;;;+;:    .. ..................:::::::::::::::;Xx++;:              .X:     +;; \n           ..;:;;+;+;:...  ..................::::::::::::::xXXXxx:...             :;;:;::;;. \n           .. ::+;;++;;:..... ................::::::;::::;X$$XXx+:::..              .;;:;. :.\n           ...;.+:++++++;....................:::::::::;;+X$$$$Xx+;:. ..                    ::\n           . :.;;;+++xx+x+;..................:::::::;;;X$$$$$Xx+;:..::.                     .\n.       .   ...;+;+++xxx+x++:........::.::.:.:::::;;;x$$$$$$$Xx:::::::..         ..          \n.    .......:..::+;+x++xX+x++;::..:::::::::::::::;;x$$$$$$$XXx+;;:;;;:...                    \n..  .... ...:::;;+x+xxxxxX$$x+;;::::::::::::::::;+X$$$$$$$$$x++;;;;;::.. .       .           \n. .. ......:::::;+xXxxxXX$$$$$x+;;;:::::::::::;+X$$$$$$$$$Xxx++++;;;;:....... . .            \n....... ....:;;:;++xXXXXxX$$$$$X+++;;;;;;:;;;+$$$$$$$$$$$XXxx++++;;;;::::::::.               \n............::::+++xxXXxxX$$$$$$$$x+++;;;++X$$$$$$$$$$$$XXXxxxxx+;;;;::::::::                \n... .......:::;;++xxxxx$XX$$$$$$$$$$XxxxX$$$$$$$$$$$$$$XXXXxxxxx+;;+;;:::::::.             ..\n........:....:;;+xxxxxxx$$$$$$$$$$$$$$$$$$$$$$$$$$$$X$XXXXxxxxxx+;;;;::::.....           ...:\n.............:;;++xxxxxxXX$$$$$$$$$$$$$$$$$$$$$$$$$$XXXXXxx+++x++;;;;:......   .      ...::::\n.........:...:;;+++xxxxxxx$$$$$$$$$$$$$$$$$$$$$$$$$$$$Xxxx++++++;;;;;::....    ..   ..:::;;;;\n.........:...::;+++xxxxxxx$$$$$$$$$$$$$$$$$$$$$$$$$$$$Xxxxxxxxx+;;;:::.....  ....:::::::;:;+;\n.........::.::;:+xxxxxxxxx$$$$$$$$$$$$$$$$$$$$$$$X$XXXxxxxx+++++;;;:....   ..::;;;;;;;;;::;;;\n.........:...:::;+xxxxxxxx$$$$$$$$$$$$$$$$$$$$$$$$$$XXxxxxxxxx++;;;:.......:;++++++;;;:   .. \n...........:::;;;+xxxxxxxX$$$$$$$$$$$$$$$$$$$$$$$XX$XXXxxxxxxxx+;+;:.. ..:;+xxxx+;;:.::      ";
-
-// ── Boot sequence ──────────────────────────────────────────
 const bootLines = [
   { text: "INITIALIZING BIOS v4.2.1...",                         delay: 60  },
   { text: "CPU: INTEL CORE i9 @ 3.90GHz [OK]",                  delay: 40  },
@@ -304,7 +58,6 @@ const bootLines = [
   { text: "",                                                     delay: 400 },
 ];
 
-let booting = true;
 const bootOutput = document.getElementById('boot-output');
 let lineIdx = 0;
 let timeouts = [];
@@ -321,46 +74,14 @@ function runBoot() {
   timeouts.push(t);
 }
 
-function typeAsciiArt(el, text) {
-  const lines = text.split('\n');
-  let i = 0;
-  el.textContent = '';
-  function nextLine() {
-    if (i >= lines.length) return;
-    el.textContent += (i === 0 ? '' : '\n') + lines[i];
-    i++;
-    setTimeout(nextLine, 18);
-  }
-  nextLine();
-}
-
 function transitionToSite() {
-  booting = false;
   const bootScreen = document.getElementById('boot-screen');
   bootScreen.style.opacity = '0';
   bootScreen.style.transition = 'opacity 0.8s ease';
-  setTimeout(() => {
-    bootScreen.style.display = 'none';
-    const main = document.getElementById('main-site');
-    main.style.display = 'block';
-    main.style.opacity = '0';
-    main.style.transition = 'opacity 0.8s ease';
-    setTimeout(() => { main.style.opacity = '1'; }, 50);
-    typeAsciiArt(document.getElementById('ascii-art'), ASCII_ART);
-  }, 800);
+  setTimeout(() => { window.location.href = 'main.html'; }, 800);
 }
 
 runBoot();
-
-// Uptime counter
-const startTime = Date.now();
-setInterval(() => {
-  const s = Math.floor((Date.now() - startTime) / 1000);
-  const m = Math.floor(s / 60);
-  const h = Math.floor(m / 60);
-  const el = document.getElementById('uptime');
-  if (el) el.textContent = h + 'h ' + (m % 60) + 'm ' + (s % 60) + 's';
-}, 1000);
     </script>
   </body>
 </html>
