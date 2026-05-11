@@ -98,8 +98,15 @@ body {
 
 .nav-logo {
   font-size: 13px;
-  color: var(--green-mid);
+  color: var(--green);
   letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-logo:hover {
+  color: #fff;
+  text-shadow: 0 0 10px var(--green), 0 0 20px var(--green);
 }
 
 .nav-links {
